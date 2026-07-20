@@ -88,6 +88,17 @@
       }
     }
     </script>
+<script>
+    function trackWhatsappClick(link, placement) {
+        var payload = { event: 'whatsapp_click', whatsapp_url: link, placement: placement || 'unknown' };
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(payload);
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', 'whatsapp_click', { event_category: 'lead', event_label: placement || 'unknown', transport_type: 'beacon' });
+        }
+        return true;
+    }
+</script>
 </head>
 <body>
 <header>
@@ -105,7 +116,7 @@
         <span class="eyebrow">Condomínios</span>
         <h1>Armário inteligente para condomínio: como funciona e por que adotar</h1>
         <p>O volume de compras online cresceu. A portaria virou central de recebimento. O problema não é a encomenda... é a falta de processo.</p>
-        <a class="cta" href="https://wa.me/552731901960?text=Olá!%20Gostaria%20de%20uma%20apresentação%20sobre%20armário%20inteligente%20para%20condomínio" target="_blank">Solicitar apresentação</a>
+        <a class="cta" href="https://wa.me/552731901960?text=Olá!%20Gostaria%20de%20uma%20apresentação%20sobre%20armário%20inteligente%20para%20condomínio" target="_blank" onclick="return trackWhatsappClick(this.href, 'cta')">Solicitar apresentação</a>
     </div>
 </section>
 <main>
@@ -168,7 +179,7 @@
             <div class="cta-box">
                 <h2>Quer levar armários inteligentes para o seu condomínio?</h2>
                 <p>A AirLocker atende condomínios e empresas em Minas Gerais com implantação orientada e suporte regional.</p>
-                <a class="cta" href="https://wa.me/552731901960?text=Olá!%20Gostaria%20de%20uma%20apresentação%20da%20AirLocker%20para%20meu%20condomínio" target="_blank">Agendar apresentação</a>
+                <a class="cta" href="https://wa.me/552731901960?text=Olá!%20Gostaria%20de%20uma%20apresentação%20da%20AirLocker%20para%20meu%20condomínio" target="_blank" onclick="return trackWhatsappClick(this.href, 'cta')">Agendar apresentação</a>
             </div>
         </article>
     </div>
@@ -176,7 +187,7 @@
 <footer>
     <div class="container">
         <p><strong>AirLocker Belo Horizonte</strong></p>
-        <p><a href="https://wa.me/552731901960" target="_blank">BH: (27) 3190-1960</a></p>
+        <p><a href="https://wa.me/552731901960" target="_blank" onclick="return trackWhatsappClick(this.href, 'content_link')">BH: (27) 3190-1960</a></p>
         <p>Email: <a href="mailto:contato@safelocker.com.br">contato@safelocker.com.br</a></p>
         <p><a href="/blog/">Blog AirLocker - SafeLocker</a></p>
         <p>© 2026 AirLocker - SafeLocker - Todos os direitos reservados</p>

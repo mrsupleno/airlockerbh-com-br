@@ -1005,6 +1005,17 @@
         }
 
     </style>
+<script>
+    function trackWhatsappClick(link, placement) {
+        var payload = { event: 'whatsapp_click', whatsapp_url: link, placement: placement || 'unknown' };
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(payload);
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', 'whatsapp_click', { event_category: 'lead', event_label: placement || 'unknown', transport_type: 'beacon' });
+        }
+        return true;
+    }
+</script>
 </head>
 <body class="landing-page">
     <!-- Google Tag Manager (noscript) -->
@@ -1022,7 +1033,7 @@
                 <a href="/armario-inteligente-condominio/">Condomínio</a>
                 <a href="/armario-inteligente-empresas/">Empresas</a>
                 <a href="/blog/">Blog</a>
-                <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">WhatsApp</a>
             </nav>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
@@ -1037,7 +1048,7 @@
             <h1>Armário Inteligente para Condomínio — Locação e Instalação em Belo Horizonte</h1>
             <p class="lead">A AirLocker instala e opera <strong>armário inteligente para condomínio</strong> em Belo Horizonte, resolvendo o problema mais recorrente da portaria: o acúmulo de encomendas, os extravios e as reclamações de morador por atraso na entrega. O locker organiza as encomendas do condomínio, libera a portaria e deixa o morador retirar com código, no horário dele — com menos reclamação e mais controle.</p><p class="lead">A operação é local: atendimento comercial próprio para Belo Horizonte, com suporte técnico que conhece a rotina de cada condomínio atendido — não é um SAC nacional genérico.</p>
             <div class="nap-box">📍 Atendimento regional AirLocker em Belo Horizonte - MG · (27) 3190-1960 · Seg-Sex 8h-18h, sábado sob agendamento</div>
-            <a class="cta-btn" href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">Falar no WhatsApp (27) 3190-1960</a>
+            <a class="cta-btn" href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'cta')">Falar no WhatsApp (27) 3190-1960</a>
         </div>
     </section>
 
@@ -1053,7 +1064,7 @@
 <p>O <strong>armário inteligente para condomínio</strong> resolve isso na raiz: o entregador deposita o pacote direto no locker, sem precisar da portaria, e o morador recebe um código para retirar quando quiser — inclusive fora do horário comercial, já que o locker fica disponível 24 horas para retirada.</p><h2>Como funciona o armário inteligente AirLocker</h2>
 <p>O funcionamento segue 4 passos simples, sem exigir treinamento do porteiro nem do morador:</p>
 <ol><li><strong>Entrega:</strong> o entregador (Correios, aplicativo ou transportadora) deposita o pacote em um compartimento livre do locker.</li><li><strong>Código:</strong> o sistema gera um código de retirada e notifica o morador.</li><li><strong>Retirada:</strong> o morador retira o pacote no locker, com o código, no horário que for melhor para ele — o compartimento fica disponível 24 horas por dia, 7 dias por semana.</li><li><strong>Portaria livre:</strong> a portaria não precisa guardar, controlar nem entregar nada — o locker assume essa etapa inteira.</li></ol>
-<p class="cta-inline">Quer uma visita técnica gratuita para avaliar o melhor local de instalação no seu condomínio? Chame a AirLocker: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">(27) 3190-1960</a>.</p><h2>Benefícios para o condomínio e para o síndico</h2>
+<p class="cta-inline">Quer uma visita técnica gratuita para avaliar o melhor local de instalação no seu condomínio? Chame a AirLocker: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">(27) 3190-1960</a>.</p><h2>Benefícios para o condomínio e para o síndico</h2>
 <p>Para quem administra o condomínio, o armário inteligente para condomínio traz 4 ganhos diretos:</p>
 <div class="benefit-grid"><div class="benefit-card"><strong>Menos reclamação de morador</strong>sem &quot;sumiço&quot; de encomenda, sem fila na portaria.</div><div class="benefit-card"><strong>Portaria liberada</strong>a equipe volta a focar em segurança, não em controle de pacote.</div><div class="benefit-card"><strong>Retirada 24/7</strong>o morador não depende do horário da portaria para pegar sua encomenda.</div><div class="benefit-card"><strong>Gestão simplificada</strong>cada retirada fica registrada, sem depender de anotação manual ou controle informal do porteiro.</div></div><h2>Modelos AirLocker: do compacto ao premium</h2>
 <p>A AirLocker opera com 4 modelos de locker, dimensionados conforme o tamanho e o volume de entregas do condomínio:</p>
@@ -1061,12 +1072,12 @@
 <p>A AirLocker faz uma visita técnica antes da instalação para indicar o modelo adequado ao seu condomínio — sem custo de diagnóstico.</p><h2>Como instalar o armário inteligente no seu condomínio</h2>
 <p>A instalação segue 3 etapas, conduzidas pela equipe da AirLocker:</p>
 <ol><li><strong>Visita técnica e proposta</strong> — avaliação do espaço disponível na portaria/hall e indicação do modelo de locker adequado.</li><li><strong>Instalação e implantação</strong> — montagem do locker e configuração do sistema de retirada por código.</li><li><strong>Suporte e manutenção local pós-instalação</strong> — acompanhamento contínuo, com atendimento da própria equipe regional da AirLocker.</li></ol>
-<p class="cta-inline">Peça sua visita técnica gratuita: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">(27) 3190-1960</a>.</p><h2>Regiões Atendidas em Belo Horizonte</h2>
+<p class="cta-inline">Peça sua visita técnica gratuita: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">(27) 3190-1960</a>.</p><h2>Regiões Atendidas em Belo Horizonte</h2>
 <p>A AirLocker atende condomínios residenciais e empresariais em:</p>
 <div class="regions"><span class="region-chip">Belo Horizonte (MG)</span></div>
 <p class="internal-link">Veja também: <a href="/armario-inteligente-empresas/">Armário Inteligente para Empresas</a></p><h2>Armário inteligente para condomínio: fale agora com a AirLocker</h2>
 <p>Se o seu condomínio ainda sofre com encomenda amontoada na portaria, reclamação de morador e tempo perdido da equipe com controle manual de entrega, a AirLocker faz a visita técnica e apresenta a proposta sem custo.</p>
-<p class="cta-inline">Fale agora com a AirLocker: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">(27) 3190-1960</a> — Seg a Sex, 8h às 18h (sábado sob agendamento).</p><h2>Perguntas frequentes sobre o armário inteligente para condomínio</h2>
+<p class="cta-inline">Fale agora com a AirLocker: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">(27) 3190-1960</a> — Seg a Sex, 8h às 18h (sábado sob agendamento).</p><h2>Perguntas frequentes sobre o armário inteligente para condomínio</h2>
 <div class="faq">
 <details><summary>O armário inteligente funciona em qualquer tamanho de condomínio?</summary><p>Sim. A AirLocker tem 4 modelos (Compacto, Digital, Premium, Empresarial) e faz uma visita técnica para indicar o mais adequado ao volume de entregas do seu condomínio.</p></details>
 <details><summary>O morador pode retirar a encomenda fora do horário comercial?</summary><p>Sim. O locker fica disponível 24 horas por dia, 7 dias por semana, para retirada — mesmo fora do horário de atendimento comercial da AirLocker (Seg a Sex, 8h às 18h).</p></details>
@@ -1076,7 +1087,7 @@
 
             <div class="mp-footer-block">
                 <p><strong>AirLocker</strong> · Atendimento regional em Belo Horizonte - MG</p>
-                <p>📞 <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">(27) 3190-1960</a> (WhatsApp) · ✉️ contato@safelocker.com.br</p>
+                <p>📞 <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">(27) 3190-1960</a> (WhatsApp) · ✉️ contato@safelocker.com.br</p>
                 <p>🕒 Seg a Sex, 8h às 18h · Sábado sob agendamento · Domingo e feriados sem atendimento comercial (retirada no locker 24/7)</p>
                 <div class="map-wrap">
                     <iframe src="https://maps.google.com/maps?q=Belo+Horizonte+-+MG&z=12&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa AirLocker Belo Horizonte"></iframe>
@@ -1089,7 +1100,7 @@
         <div class="container">
             <div class="footer-content" style="display:block;text-align:center;padding:20px 0;">
                 <p><strong>AirLocker</strong> · Atendimento regional em Belo Horizonte - MG</p>
-                <p>WhatsApp: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener">(27) 3190-1960</a> · contato@safelocker.com.br</p>
+                <p>WhatsApp: <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." target="_blank" rel="noopener" onclick="return trackWhatsappClick(this.href, 'content_link')">(27) 3190-1960</a> · contato@safelocker.com.br</p>
                 <p>Seg a Sex, 8h às 18h · Sábado sob agendamento · Retirada no locker 24/7</p>
                 <p style="margin-top:12px;"><a href="/">AirLocker MG</a> · <a href="/">Home</a> · <a href="/blog/">Blog AirLocker - SafeLocker</a></p>
             </div>
@@ -1099,7 +1110,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." class="whatsapp-fixed" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a href="https://wa.me/552731901960?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20visita%20t%C3%A9cnica%20da%20AirLocker." class="whatsapp-fixed" target="_blank" rel="noopener" aria-label="WhatsApp" onclick="return trackWhatsappClick(this.href, 'floating_button')">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
 
