@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <linearGradient id="lockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A148C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F06292;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E676;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00C853;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#9C27B0;stop-opacity:0.3" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background glow -->
+  <circle cx="350" cy="350" r="320" fill="url(#glowGrad)" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="350" cy="350" r="250" fill="url(#glowGrad)" opacity="0.3"/>
+  
+  <!-- Main Locker Structure (mais realista) -->
+  <g transform="translate(200, 80)">
+    <!-- Locker body - com degradê roxo para rosa -->
+    <defs>
+      <linearGradient id="lockerBody" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#5E35B1;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#7B1FA2;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#E91E63;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    
+    <rect x="30" y="60" width="280" height="480" rx="12" fill="url(#lockerBody)" stroke="#7B1FA2" stroke-width="4" filter="url(#glow)"/>
+    
+    <!-- Airlocker branding no topo -->
+    <rect x="50" y="80" width="100" height="35" rx="5" fill="#424242"/>
+    <text x="100" y="102" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Airlocker</text>
+    
+    <!-- Play Store / App Store badges -->
+    <rect x="160" y="85" width="70" height="25" rx="3" fill="#01875F"/>
+    <text x="195" y="100" font-family="Arial" font-size="9" fill="white" text-anchor="middle">▶ Google Play</text>
+    
+    <rect x="240" y="85" width="70" height="25" rx="3" fill="#000"/>
+    <text x="275" y="100" font-family="Arial" font-size="9" fill="white" text-anchor="middle"> App Store</text>
+    
+    <!-- Compartments com glow rosa -->
+    <rect x="50" y="130" width="240" height="130" rx="8" fill="#6A1B9A" stroke="#E91E63" stroke-width="3" opacity="0.9"/>
+    <rect x="50" y="280" width="240" height="130" rx="8" fill="#6A1B9A" stroke="#E91E63" stroke-width="3" opacity="0.9"/>
+    <rect x="50" y="430" width="240" height="100" rx="8" fill="#6A1B9A" stroke="#E91E63" stroke-width="3" opacity="0.9"/>
+    
+    <!-- LED indicators com brilho -->
+    <circle cx="75" cy="180" r="8" fill="#00E676" filter="url(#glow)"/>
+    <circle cx="75" cy="330" r="8" fill="#FFD700" filter="url(#glow)"/>
+    <circle cx="75" cy="475" r="8" fill="#00E676" filter="url(#glow)"/>
+    
+    <!-- Display touch no meio -->
+    <rect cx="160" cy="200" width="60" height="80" rx="5" fill="#1E1E1E" stroke="#E91E63" stroke-width="2"/>
+    
+    <!-- QR codes brancos -->
+    <rect x="250" y="170" width="30" height="30" fill="white" rx="3"/>
+    <rect x="250" y="320" width="30" height="30" fill="white" rx="3"/>
+    <rect x="250" y="465" width="30" height="30" fill="white" rx="3"/>
+    
+    <!-- Fechaduras/locks -->
+    <g transform="translate(120, 190)">
+      <rect x="0" y="5" width="18" height="22" rx="3" fill="none" stroke="#E91E63" stroke-width="3"/>
+      <path d="M 4 5 Q 4 0, 9 0 T 14 5" fill="none" stroke="#E91E63" stroke-width="3"/>
+    </g>
+    <g transform="translate(120, 340)">
+      <rect x="0" y="5" width="18" height="22" rx="3" fill="none" stroke="#FFD700" stroke-width="3"/>
+      <path d="M 4 5 Q 4 0, 9 0 T 14 5" fill="none" stroke="#FFD700" stroke-width="3"/>
+    </g>
+  </g>
+  
+  <!-- Phone 1 (esquerda - maior) -->
+  <g transform="translate(60, 280) rotate(-12)">
+    <rect x="0" y="0" width="120" height="230" rx="20" fill="#2C2C2C" stroke="#424242" stroke-width="4"/>
+    <rect x="10" y="30" width="100" height="175" rx="8" fill="#1A1A1A"/>
+    <rect x="18" y="42" width="84" height="145" rx="5" fill="#E91E63"/>
+    <circle cx="60" cy="205" r="12" fill="#1E1E1E" stroke="#424242" stroke-width="2"/>
+    
+    <!-- Conteúdo da tela -->
+    <text x="60" y="85" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">Meus</text>
+    <text x="60" y="105" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">Airlocker+</text>
+    <rect x="30" y="120" width="60" height="40" rx="5" fill="white" opacity="0.9"/>
+    <text x="60" y="142" font-family="Arial" font-size="11" fill="#E91E63" text-anchor="middle" font-weight="bold">Bem-vindo</text>
+  </g>
+  
+  <!-- Phone 2 (direita - maior) -->
+  <g transform="translate(520, 240) rotate(8)">
+    <rect x="0" y="0" width="130" height="250" rx="22" fill="#2C2C2C" stroke="#424242" stroke-width="4"/>
+    <rect x="10" y="35" width="110" height="185" rx="8" fill="#1A1A1A"/>
+    <rect x="20" y="48" width="90" height="150" rx="5" fill="url(#screenGrad)"/>
+    <circle cx="65" cy="220" r="13" fill="#1E1E1E" stroke="#424242" stroke-width="2"/>
+    
+    <!-- Conteúdo da tela - mapa/localização -->
+    <text x="65" y="90" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">Notificação</text>
+    <rect x="30" y="105" width="70" height="60" rx="5" fill="white" opacity="0.9"/>
+    <text x="65" y="125" font-family="Arial" font-size="11" fill="#00C853" text-anchor="middle" font-weight="bold">Encomenda</text>
+    <text x="65" y="140" font-family="Arial" font-size="11" fill="#00C853" text-anchor="middle" font-weight="bold">chegou!</text>
+    <text x="65" y="155" font-family="Arial" font-size="9" fill="#666" text-anchor="middle">Retire agora</text>
+  </g>
+  
+  <!-- Decorative elements - círculos de glow -->
+  <circle cx="120" cy="200" r="40" fill="#00E676" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="580" cy="500" r="50" fill="#E91E63" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="600" cy="150" r="35" fill="#FFD700" opacity="0.2" filter="url(#glow)"/>
+</svg>

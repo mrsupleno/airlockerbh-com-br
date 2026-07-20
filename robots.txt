@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://airlockerbh.com.br/sitemap.xml

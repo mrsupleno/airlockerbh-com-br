@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">AirLocker Belo Horizonte</title>
+  <desc id="logoDesc">Logo com AirLocker em destaque e Belo Horizonte como subtítulo regional</desc>
+  <defs>
+    <linearGradient id="airlockerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B2C91" />
+      <stop offset="100%" stop-color="#9D4EDD" />
+    </linearGradient>
+  </defs>
+
+  <!-- AirLocker como marca principal -->
+  <text x="250" y="72" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800" fill="url(#airlockerGrad)" text-anchor="middle" letter-spacing="-1.5">AirLocker</text>
+
+  <!-- Belo Horizonte como regional -->
+  <text x="250" y="116" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="500" fill="#6B2C91" text-anchor="middle" opacity="0.82">Belo Horizonte · ES</text>
+</svg>
